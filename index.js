@@ -1,17 +1,3 @@
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
-
-const meter = 3.281 // feet
-const feet = 1/3.281 // meter
-
-const liter = 0.264 //gallon
-const gallon = 1 / 0.264 // liter
-const kilogram = 2.204 //pound 
-const pound = 1 / 2.204 // kilogram
-
 // Get DOM for:
 // input: "number-input-box", pass into a const variable
 const numInput = document.getElementById("number-input-box")
@@ -34,18 +20,27 @@ const convertMass = document.getElementById("mass-conversion")
 // user innerHTML method to pass the result into the DOM 
 
 convertBtn.addEventListener("click", function() {
-    let feetResult = numInput * feet 
-    console.log(feetResult)
-})
-
-
-convertBtn.addEventListener("click", function() {
-    // Convert numInput value to a number
-    const userInput = parseFloat(numInput.value);
-
-    let feetResult = userInput * feet;
+    const userInput = parseFloat(numInput.value)
+    // Units
+        /*
+        1 meter = 3.281 feet
+        1 liter = 0.264 gallon
+        1 kilogram = 2.204 pound
+        */
+    const meter = userInput / 3.281
+    const feet = userInput * 3.281
+    const gallon = userInput * 0.264
+    const liter = userInput / 0.264
+    const pound = userInput * 2.204
+    const kilogram = userInput / 2.204
     
     // Update the result in the DOM
-    convertLength.innerHTML = `${userInput} meters = ${feetResult.toFixed(2)} feet | ${userInput} feet = ${userInput / feet} meters`;
+    // 20 meters = 65.616 feet | 20 feet = 6.096 meters
+    convertLength.innerHTML = `${userInput} meters = ${feet.toFixed(2)} feet | ${userInput} feet = ${meter.toFixed(2)} meters`
     
-});
+    // `20 liters = 5.284 gallons | 20 gallons = 75.708 liters`
+    convertVolume.innerHTML = `${userInput} liters = ${gallon.toFixed(2)} gallons | ${userInput} gallons = ${liter.toFixed(2)} liters`
+    
+    // 20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos
+    convertMass.innerHTML = `${userInput} kilos = ${pound.toFixed(2)} pounds | ${userInput} pounds = ${kilogram.toFixed(2)} kilos`
+})
