@@ -1,0 +1,105 @@
+
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    text-align: center;
+    font-style: normal;
+}
+
+/* converter top section */
+
+.converter-top-section {
+    background: #6943FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+
+#number-input-box {
+    width: 117px;
+    height: 83px;
+    border-radius: 5px;
+    border: 2px solid #B295FF;
+    background: none;
+    /* font */
+    color: #FFF;
+    text-align: center;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24.393px; /* 42.057% */
+    
+    /* spacing */
+    margin-top: 30px;
+    margin-bottom: 26px;
+}
+
+#convert-num-btn {
+    /* placement */
+    display: inline-flex;
+    padding: 9px 27.5px;
+
+    /* styling */
+    border-radius: 5px;
+    border: none;
+    background: #FFF;
+
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* converter bottom section */
+
+.converter-bottom-section {
+    padding: 36px 24px;
+    background: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.converter-bottom-section .card {
+    width: 500px;
+    height: 108.573px;
+    border-radius: 4.681px 0px 0px 0px;
+    background: var(--white, #FFF);
+    margin-bottom: 24px;
+}
+
+.converter-bottom-section .card:last-of-type {
+    margin: 0;
+}
+
+
+/* Fonts */
+
+h1 {
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38px; /* 135.714% */
+    letter-spacing: -0.84px;
+    margin: 0;
+}
+
+.card-title {
+    color: #5A537B;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+}
+
+.conversion-result {
+    color: #353535;
+    text-align: center;
+
+    /* text-sm/leading-5/font-normal */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+
